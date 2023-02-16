@@ -1,0 +1,31 @@
+.Accueil {
+  display: flex;
+  color: #424242;
+  height: calc(100vh - 60px);
+  width: 100vw;
+  --ion-background-color: #e1eaf9;
+}
+
+.AccueilBlock {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.AccueilBlock div {
+  text-align: center;
+  width: 100%;
+}
+.AccueilBlock div h1 {
+  font-size: 48px;
+  font-weight: 500;
+}
+.AccueilBlock div h2 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.primaryButton button-native {
+  font-size: 20px;
+  padding: 12px 12px;
+  height: unset;
+}

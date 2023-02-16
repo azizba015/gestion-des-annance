@@ -1,0 +1,30 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="login" text="Back" color="primary">Back</ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen="true" slot="fixed"  >
+  <div class="title">Please set your email and password</div>
+  <div class="ion-card-container">
+  <ion-card class="ion-card-style">
+    <ion-card-content>
+      <form #f="ngForm" (ngSubmit)="loginauth(f.value)">
+        <div class="wrapform">
+          <ion-item>
+            <ion-input type="text" name="email" placeholder="Email" ngModel>
+              <ion-icon name="mail-outline"class="ion-margin"></ion-icon>
+            </ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" name="password" placeholder="password" ngModel>
+              <ion-icon name="lock-closed" class="ion-margin"></ion-icon>
+            </ion-input>
+          </ion-item>
+        </div>
+        <ion-button expand="full" shape="round" type="submit" fill="solid" class="sign-btn">Login</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card></div>
+</ion-content>

@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <!-- ion-back-button avec defaultHref va retourner 'utlisateur vers /annonces-->
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button name="arrow-back-outline" defaultHref="/annonces">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="d-inline-flex p-2 bd-highlight">
+      Annonce Details</ion-title
+    >
+    <!-- on a deja recuperer l'email du user de a partir de local storage et maintenant on va le comparer avec le mail du createur de l'annonce si ils sont les memes on affiche le boutton du suppression-->
+    <ion-button
+      *ngIf="userEmail===annonce.createdBy"
+      slot="end"
+      (click)="deleteAnnonce()"
+    >
+      <ion-icon name="trash-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-margin">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="8" offset="2" class="container">
+        <div class="ion-margin">
+          <h1 style="color: black; font-weight: 500; font-size: 56px">
+            {{annonce.title}}
+          </h1>
+          <div style="display: flex; justify-content: center">
+            <ion-img
+              [src]="annonce.imageUrl"
+              style="max-width: 500px"
+            ></ion-img>
+          </div>
+          <div class="ion-margin">
+            <br />
+            <ion-badge slot="start" style="color: white"
+              >{{annonce.category}}</ion-badge
+            >
+
+            <p style="font-size: x-large; color: black">
+              {{annonce.description}}
+            </p>
+          </div>
+          <br />
+
+          <div style="display: flex; align-items: baseline; gap: 4px">
+            <h4 style="color: gray">Posted by:</h4>
+            <span style="color: black">{{annonce.createdBy}}</span>
+          </div>
+        </div>
+      </ion-col></ion-row
+    ></ion-grid
+  >
+</ion-content>

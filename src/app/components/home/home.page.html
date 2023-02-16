@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="ion-inline" style="display: flex; flex-flow: row wrap">
+    <ion-title>LOGO</ion-title>
+    <ion-buttons slot="end">
+      <ion-button
+        class="primaryButton"
+        color="primary"
+        fill="solid"
+        shape="round"
+        [routerLink]="['/login']"
+        >Login</ion-button
+      >
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="Accueil">
+    <ion-avatar
+      style="flex: 1; display: flex; justify-content: center; height: 100%"
+    >
+      <img src="assets/images/bg.jpg" />
+    </ion-avatar>
+    <div class="AccueilBlock">
+      <div>
+        <h1>Welcome back</h1>
+        <h2>We are happy to see you again</h2>
+        <ion-button
+          class="primaryButton"
+          fill="solid"
+          shape="round"
+          [routerLink]="['/login']"
+          >Login</ion-button
+        >
+      </div>
+    </div>
+  </div>
+</ion-content>

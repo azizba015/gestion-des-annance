@@ -1,0 +1,10 @@
+{
+  "css.validate": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.fontSize": 13,
+  "recommendations": ["ionic.ionic"]
+}
